@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import styled, { keyframes } from 'styled-components';
 import LogoComponents from '../subComponents/LogoComponents';
@@ -41,7 +41,7 @@ z-index:1;
 `
 
 const Work = styled(NavLink)`
-color: ${props => props.theme.text};
+color: ${props => props.click ? props.theme.body : props.theme.text};
 position: absolute;
 top: 50%;
 left: calc(1rem + 2vw);
@@ -95,23 +95,40 @@ transition: all 1s ease;
 &>:first-child{
     animation: ${rotate} infinite 1.5s linear;
 }
+
 &>:last-child{
     display: ${props => props.click ? 'none' : 'inline-block'};
     padding-top: 1rem;
 }
 `
-
+const DarkDiv = styled.div`
+position: absolute;
+top: 0;
+background-color: #000;
+bottom: 0;
+right: 50%;
+width: ${props => props.click ? '50%' : '0%'};
+height: ${props => props.click ? '100%' : '0%'};
+z-index:1;
+transition: height 0.5s ease, width 1s ease 0.5s;
+`
 
 const Main = () => {
+    const [click, setClick] = useState(false);
+
+    const handleClick = () => setClick(!click);
+
+
     return (
         <MainContainer>
+            <DarkDiv click={click} />
             <Container>
                 <PowerButton />
-                <LogoComponents />
-                <SocialIcons />
+                <LogoComponents theme={click ? 'dark' : 'light'} />
+                <SocialIcons theme={click ? 'dark' : 'light'} />
 
-                <Center>
-                    <YinYang width={150} height={150} fill='currentColor' />
+                <Center click={click}>
+                    <YinYang onClick={handleClick} width={click ? 120 : 200} height={click ? 120 : 200} fill='currentColor' />
                     <span>Click Here</span>
                 </Center>
 
@@ -127,7 +144,7 @@ const Main = () => {
                     </h2>
                 </Projects>
 
-                <Work to='/work'>
+                <Work to='/work' click={click}>
                     <h2>
                         Work
                     </h2>
@@ -135,7 +152,7 @@ const Main = () => {
 
                 <BottomBar>
 
-                    <About to='/about'>
+                    <About to='/about' click={click}>
                         <h2>
                             About
                         </h2>
