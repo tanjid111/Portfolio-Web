@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 import Me from '../assets/Images/avatar.png'
+import { NavLink } from 'react-router-dom';
 
 const Box = styled(motion.div)`
 position: absolute;
@@ -59,7 +60,19 @@ justify-content: space-evenly;
     font-size: calc(0.5rem + 1.5vw);
     font-weight:300;
 }
-
+`
+const Resume = styled(NavLink)`
+color: ${props => props.theme.text};
+text-align: center;
+font-size: calc(1em + 1.5vw)
+position: absolute;
+top: 23rem;
+right: calc(1rem + 2vw);
+border: 2px solid;
+padding: 5px;
+border-radius:10px;
+text-decoration:none;
+z-index:;
 `
 
 const Intro = () => {
@@ -73,7 +86,10 @@ const Intro = () => {
                 <Text>
                     <h1>Hi,</h1>
                     <h3>I am Syed</h3>
-                    <h6>I am a Junior Webdeveloper and I like to code simple beutiful websites</h6>
+                    <h6>I am a Junior Webdeveloper and I like to code simple beautiful websites</h6>
+                    <Resume
+                        target="_blank" to={{ pathname: 'https://drive.google.com/file/d/1lt67Sz9tPIPl6cw1xQb8Aqn-OCmLxi4_/view?usp=sharing' }}
+                    >Download Resume</Resume>
                 </Text>
             </SubBox>
             <SubBox>
