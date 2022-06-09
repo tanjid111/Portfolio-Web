@@ -6,6 +6,7 @@ import PowerButton from '../subComponents/PowerButton';
 import SocialIcons from '../subComponents/SocialIcons';
 import { YinYang } from './AllSvgs';
 import Intro from './Intro';
+import { motion } from 'framer-motion';
 
 const MainContainer = styled.div`
     background:${props => props.theme.body};
@@ -134,35 +135,49 @@ const Main = () => {
                 </Center>
 
                 <Contact target="_blank" to={{ pathname: 'mailto:tanjidhossain@yahoo.com' }}>
-                    <h2>
+                    <motion.h2
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                    >
                         Say hi...
-                    </h2>
+                    </motion.h2>
                 </Contact>
 
                 <Projects to='/projects'>
-                    <h2>
+                    <motion.h2
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                    >
                         Projects
-                    </h2>
+                    </motion.h2>
                 </Projects>
 
                 <Work to='/work' click={click}>
-                    <h2>
+                    <motion.h2
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                    >
                         Work
-                    </h2>
+                    </motion.h2>
                 </Work>
 
                 <BottomBar>
-
                     <About to='/about' click={click}>
-                        <h2>
+                        <motion.h2
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
+                        >
                             About
-                        </h2>
+                        </motion.h2>
                     </About>
 
                     <Skills to='/skills'>
-                        <h2>
+                        <motion.h2
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
+                        >
                             Skills
-                        </h2>
+                        </motion.h2>
                     </Skills>
                 </BottomBar>
             </Container>
