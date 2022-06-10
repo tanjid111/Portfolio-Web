@@ -82,11 +82,24 @@ const Title = styled.h3`
 `;
 
 const HashTags = styled.div`
-  padding: 0.5rem 0;
-
-  ${mediaQueries(25)`  
+  padding: 0.5rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 5px;
+  ${mediaQueries(50)`  
     font-size:calc(0.5em + 1vw);
+    grid-template-columns: repeat(4, 110px);
   `};
+
+  ${mediaQueries(40)`  
+  font-size:calc(0.5em + 1vw);
+  grid-template-columns: repeat(3, 100px);
+`};
+
+${mediaQueries(30)`  
+  font-size:calc(0.5em + 1vw);
+  grid-template-columns: repeat(2, 110px);
+`};
 `;
 
 const Tag = styled.span`
