@@ -214,7 +214,7 @@ const Intro = () => {
                 <Text>
                     <h1>Hi,</h1>
                     <h3>I am Syed</h3>
-                    <h6>I am a Junior Webdeveloper and I like to code simple beautiful websites</h6>
+                    <h6>I am a Junior Full Stack Web Developer and I like to code simple beautiful websites</h6>
                     <Resume
                         target="_blank" to={{ pathname: 'https://drive.google.com/file/d/1lt67Sz9tPIPl6cw1xQb8Aqn-OCmLxi4_/view?usp=sharing' }}
                     >Download Resume</Resume>

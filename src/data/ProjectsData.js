@@ -25,6 +25,6 @@ export const Projects = [
         name: "Portfolio",
         tags: ["HTML", "CSS", "react", "javascript", "styled-components", "framer-motion"],
         imgSrc: "https://i.ibb.co/tLrRWzC/portfolio.png",
-        link: "https://dev.to/codebucks/build-redux-react-todo-list-app-with-animations-using-framer-motion-1mp1"
+        link: "https://portfolio-web-4b80e.web.app/"
     }
 ] 

@@ -249,9 +249,7 @@ const Main = () => {
                     </Contact>
                 ) : (
                     <Contact
-                        click={+false}
-                        target="_blank"
-                        to={{ pathname: "mailto:tanjidhossain@gmail.com" }}
+                        click={+click} onClick={() => setpath("contact")} to="/contact"
                     >
                         <motion.h3
                             initial={{
@@ -265,7 +263,7 @@ const Main = () => {
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.9 }}
                         >
-                            Say hi..
+                            Contact Me
                         </motion.h3>
                     </Contact>
                 )}
