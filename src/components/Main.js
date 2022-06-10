@@ -83,7 +83,7 @@ transition: all 1s ease;
 `
 
 const Contact = styled(NavLink)`
-color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
+color: ${(props) => (props.theme.text)};
 position: absolute;
 top: 2rem;
 right: calc(1rem + 2vw);
