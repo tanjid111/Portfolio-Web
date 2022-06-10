@@ -1,7 +1,9 @@
+import { motion } from 'framer-motion';
 import React from 'react'
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom'
 
-const Box = styled.div`
+const Box = styled(motion(NavLink))`
 width: calc(10rem+15vw);
 text-decoration: none;
 height: 20rem;
@@ -20,6 +22,10 @@ z-index:5;
     color:${props => props.theme.body};
     background-color: ${props => props.theme.text};
     transition: all 0.3s ease;
+}
+
+@media only screen and (max-width: 500px) {
+    width: 80%;
 }
 `
 
@@ -54,22 +60,43 @@ const Tag = styled.span`
 padding-right: 0.5rem;
 `
 
+const Item = {
+    hidden: {
+        scale: 0
+    },
+    show: {
+        scale: 1,
+        transition: {
+            type: 'spring',
+            duration: 0.5
+        }
+    }
+}
+
+const Container = styled(motion.div)``;
+
 const ProjectComponent = (props) => {
     const { name, tags, imgSrc, link } = props.project;
 
 
     return (
-        <Box target="_blank" to={{ pathname: link }}>
-            <Image img={imgSrc} />
-            <Title>{name}</Title>
-            <HashTags>
-                {
-                    tags.map((t, id) => {
-                        return <Tag key={id}>#{t}</Tag>
-                    })
-                }
-            </HashTags>
-        </Box>
+        <Container
+            variants={Item}
+        >
+            <Box target="_blank" to={{ pathname: link }}
+
+            >
+                <Image img={imgSrc} />
+                <Title>{name}</Title>
+                <HashTags>
+                    {
+                        tags.map((t, id) => {
+                            return <Tag key={id}>#{t}</Tag>
+                        })
+                    }
+                </HashTags>
+            </Box>
+        </Container>
     )
 }
 
