@@ -32,6 +32,7 @@ backdrop-filter: blur(2px);
 
   ${mediaQueries(30)`
     height:18rem;
+    backdrop-filter: none;
   `};
 
   ${mediaQueries(25)`
