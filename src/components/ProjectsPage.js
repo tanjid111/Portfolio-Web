@@ -7,6 +7,7 @@ import SocialIcons from '../subComponents/SocialIcons';
 import { Projects } from '../data/ProjectsData'
 import ProjectComponent from './ProjectComponent';
 import AnchorComponent from '../subComponents/Anchor';
+import BigTitle from '../subComponents/BigTitle';
 
 const MainContainer = styled.div`
     background-image: url(${img});
@@ -14,14 +15,14 @@ const MainContainer = styled.div`
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-  
+  width: 100vw;
 
     `
 
 const Container = styled.div`
     background-color: ${props => `rgba(${props.theme.bodyRgba},0.8)`};
     width: 100%;
-   
+   height: 100vh;
     position: relative;
     padding-bottom: 5rem;    
     `
@@ -67,6 +68,7 @@ const ProjectsPage = () => {
                     </Grid>
 
                 </Center>
+                <BigTitle text='PROJECTS' top='5rem' left='5rem' />
             </Container>
         </MainContainer>
     );

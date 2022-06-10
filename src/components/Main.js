@@ -42,7 +42,7 @@ text-decoration:none;
 z-index:1;
 `
 
-const Work = styled(NavLink)`
+const Blogs = styled(NavLink)`
 color: ${props => props.click ? props.theme.body : props.theme.text};
 position: absolute;
 top: 50%;
@@ -136,6 +136,14 @@ const Main = () => {
 
                 <Contact target="_blank" to={{ pathname: 'mailto:tanjidhossain@yahoo.com' }}>
                     <motion.h2
+                        initial={{
+                            y: -200,
+                            transition: { type: 'spring', duration: 1.5, delay: 1 }
+                        }}
+                        animate={{
+                            y: 0,
+                            transition: { type: 'spring', duration: 1.5, delay: 1 }
+                        }}
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                     >
@@ -145,6 +153,14 @@ const Main = () => {
 
                 <Projects to='/projects'>
                     <motion.h2
+                        initial={{
+                            y: -200,
+                            transition: { type: 'spring', duration: 1.5, delay: 1 }
+                        }}
+                        animate={{
+                            y: 0,
+                            transition: { type: 'spring', duration: 1.5, delay: 1 }
+                        }}
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                     >
@@ -152,38 +168,34 @@ const Main = () => {
                     </motion.h2>
                 </Projects>
 
-                <Work to='/work' click={click}>
+                <Blogs to='/blogs' click={click}>
                     <motion.h2
+                        initial={{
+                            y: -200,
+                            transition: { type: 'spring', duration: 1.5, delay: 1 }
+                        }}
+                        animate={{
+                            y: 0,
+                            transition: { type: 'spring', duration: 1.5, delay: 1 }
+                        }}
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                     >
-                        Work
+                        Blogs
                     </motion.h2>
-                </Work>
-
-                {/* <TopBar>
-                    <About to='/about' click={click}>
-                        <motion.h2
-                            whileHover={{ scale: 1.1 }}
-                            whileTap={{ scale: 0.9 }}
-                        >
-                            About
-                        </motion.h2>
-                    </About>
-
-                    <Blogs to='/blogs'>
-                        <motion.h2
-                            whileHover={{ scale: 1.1 }}
-                            whileTap={{ scale: 0.9 }}
-                        >
-                            Skills
-                        </motion.h2>
-                    </Blogs>
-                </TopBar> */}
+                </Blogs>
 
                 <BottomBar>
                     <About to='/about' click={click}>
                         <motion.h2
+                            initial={{
+                                y: 200,
+                                transition: { type: 'spring', duration: 1.5, delay: 1 }
+                            }}
+                            animate={{
+                                y: 0,
+                                transition: { type: 'spring', duration: 1.5, delay: 1 }
+                            }}
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.9 }}
                         >
@@ -193,6 +205,14 @@ const Main = () => {
 
                     <Skills to='/skills'>
                         <motion.h2
+                            initial={{
+                                y: 200,
+                                transition: { type: 'spring', duration: 1.5, delay: 1 }
+                            }}
+                            animate={{
+                                y: 0,
+                                transition: { type: 'spring', duration: 1.5, delay: 1 }
+                            }}
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.9 }}
                         >
