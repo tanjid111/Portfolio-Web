@@ -161,6 +161,26 @@ const Main = () => {
                     </motion.h2>
                 </Work>
 
+                {/* <TopBar>
+                    <About to='/about' click={click}>
+                        <motion.h2
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
+                        >
+                            About
+                        </motion.h2>
+                    </About>
+
+                    <Blogs to='/blogs'>
+                        <motion.h2
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
+                        >
+                            Skills
+                        </motion.h2>
+                    </Blogs>
+                </TopBar> */}
+
                 <BottomBar>
                     <About to='/about' click={click}>
                         <motion.h2

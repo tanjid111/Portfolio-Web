@@ -6,6 +6,7 @@ import PowerButton from '../subComponents/PowerButton';
 import SocialIcons from '../subComponents/SocialIcons';
 import { Projects } from '../data/ProjectsData'
 import ProjectComponent from './ProjectComponent';
+import AnchorComponent from '../subComponents/Anchor';
 
 const ProjectsPage = () => {
 
@@ -45,6 +46,7 @@ const ProjectsPage = () => {
                 <LogoComponents />
                 <PowerButton />
                 <SocialIcons />
+                <AnchorComponent />
                 <Center>
                     <Grid>
                         {
