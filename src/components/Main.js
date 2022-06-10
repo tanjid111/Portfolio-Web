@@ -228,9 +228,7 @@ const Main = () => {
 
                 {mq ? (
                     <Contact
-                        click={+click}
-                        target="_blank"
-                        to={{ pathname: "mailto:tanjidhossain@gmail.com" }}
+                        click={+click} onClick={() => setpath("contact")} to="/contact"
                     >
                         <motion.h3
                             initial={{
@@ -358,7 +356,7 @@ const Main = () => {
                 </BottomBar>
             </Container>
             {click ? <Intro click={click} /> : null}
-        </MainContainer>
+        </MainContainer >
     );
 };
 
