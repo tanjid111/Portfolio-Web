@@ -18,12 +18,13 @@ height:400vh;
 position: relative;
 display: flex;
 align-items: center;
+justify-content: center;
 `
 
 const Main = styled(motion.ul)`
 position: fixed;
 top: 20rem;
-left:calc(10rem + 15vw);
+
 height: 40vh;
 display: flex;
 color:white;
