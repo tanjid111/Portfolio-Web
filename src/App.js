@@ -11,6 +11,7 @@ import Blogs from "./components/Blogs"
 
 import GlobalStyle from "./globalStyles"
 import SoundBar from "./subComponents/SoundBar"
+import ContactPage from "./components/ContactPage"
 
 function App() {
   const location = useLocation();
@@ -27,6 +28,7 @@ function App() {
           <Route exact path='/projects' component={ProjectsPage}></Route>
           <Route exact path='/blogs' component={Blogs}></Route>
           <Route exact path='/skills' component={MySkillsPage}></Route>
+          <Route exact path='/contact' component={ContactPage}></Route>
         </Switch>
       </AnimatePresence>
 
