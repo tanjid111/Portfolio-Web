@@ -242,7 +242,7 @@ const Main = () => {
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.9 }}
                         >
-                            Say hi..
+                            Contact Me
                         </motion.h3>
                     </Contact>
                 ) : (
