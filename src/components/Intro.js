@@ -190,47 +190,47 @@ border: 2px solid;
 padding: 5px;
 border-radius:10px;
 text-decoration:none;
-z-index:;
+z-index: 1;
 `
 
 const Intro = () => {
-    const [height, setHeight] = useState("55vh");
+  const [height, setHeight] = useState("55vh");
 
-    useEffect(() => {
-        if (window.matchMedia("(max-width: 50em)").matches) {
-            setHeight("70vh");
-        }
-        if (window.matchMedia("(max-width: 20em)").matches) {
-            setHeight("60vh");
-        }
-    }, []);
-    return (
-        < Box
-            initial={{ height: 0 }}
-            animate={{ height: '55vh' }}
-            transition={{ type: 'spring', duration: 2, delay: 1 }}
+  useEffect(() => {
+    if (window.matchMedia("(max-width: 50em)").matches) {
+      setHeight("70vh");
+    }
+    if (window.matchMedia("(max-width: 20em)").matches) {
+      setHeight("60vh");
+    }
+  }, []);
+  return (
+    < Box
+      initial={{ height: 0 }}
+      animate={{ height: '55vh' }}
+      transition={{ type: 'spring', duration: 2, delay: 1 }}
+    >
+      <SubBox>
+        <Text>
+          <h1>Hi,</h1>
+          <h3>I am Syed</h3>
+          <h6>I am a Junior Full Stack Web Developer and I like to code simple beautiful websites</h6>
+          <Resume
+            target="_blank" to={{ pathname: 'https://drive.google.com/file/d/1lt67Sz9tPIPl6cw1xQb8Aqn-OCmLxi4_/view?usp=sharing' }}
+          >Download Resume</Resume>
+        </Text>
+      </SubBox>
+      <SubBox>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 2 }}
         >
-            <SubBox>
-                <Text>
-                    <h1>Hi,</h1>
-                    <h3>I am Syed</h3>
-                    <h6>I am a Junior Full Stack Web Developer and I like to code simple beautiful websites</h6>
-                    <Resume
-                        target="_blank" to={{ pathname: 'https://drive.google.com/file/d/1lt67Sz9tPIPl6cw1xQb8Aqn-OCmLxi4_/view?usp=sharing' }}
-                    >Download Resume</Resume>
-                </Text>
-            </SubBox>
-            <SubBox>
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 1, delay: 2 }}
-                >
-                    <img className='pic' src={Me} alt="Profile Pic" />
-                </motion.div>
-            </SubBox>
-        </Box>
-    );
+          <img className='pic' src={Me} alt="Profile Pic" />
+        </motion.div>
+      </SubBox>
+    </Box>
+  );
 };
 
 export default Intro;
