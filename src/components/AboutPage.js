@@ -1,6 +1,6 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
-import { DarkTheme } from './Themes';
+import { DarkTheme, mediaQueries } from './Themes';
 import styled from 'styled-components';
 
 import LogoComponents from '../subComponents/LogoComponents';
@@ -56,6 +56,28 @@ left: calc(5rem + 5vw);
 top: 10rem;
 font-family: 'Ubuntu Mono', monospace;
 font-style: italic;
+
+${mediaQueries(40)`
+          width: 60vw;
+          height: 50vh;
+          top:50%;
+          left:50%;
+          transform:translate(-50%,-50%);
+
+
+  `};
+  ${mediaQueries(30)`
+          width: 50vw;
+          height: auto;
+          backdrop-filter: none;
+          margin-top:2rem;
+
+  `};
+
+${mediaQueries(20)`
+          padding: 1rem;
+          font-size: calc(0.5rem + 1vw);
+  `};
 `
 
 const AboutPage = () => {

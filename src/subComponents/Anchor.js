@@ -1,9 +1,13 @@
 import React, { useEffect, useRef } from 'react'
 import styled from 'styled-components'
 import { Anchor, Link } from '../components/AllSvgs'
+import { mediaQueries } from "../components/Themes";
 
 const Container = styled.div`
 position: relative;
+${mediaQueries(40)`
+display:none;
+`};
 `
 const Slider = styled.div`
 position: fixed;
