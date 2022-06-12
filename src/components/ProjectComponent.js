@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import React from 'react'
 import styled from 'styled-components';
-import { NavLink } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 import { mediaQueries } from './Themes';
 
 const Box = styled(motion.div)`
@@ -166,7 +166,7 @@ justify-content: center;
 // margin: 10px 0;
 `
 
-const Button = styled(NavLink)`
+const Button = styled(Link)`
 color: ${props => props.theme.text};
 text-align: center;
 font-size: calc(1em + 1.5vw)
@@ -198,7 +198,7 @@ const ProjectComponent = (props) => {
       <Box>
         <Title>{name}</Title>
         <Image
-          target="_blank" to={{ pathname: link }}
+          target="_blank" to={link}
           img={imgSrc} />
 
         <Technology>Technology Used</Technology>
@@ -220,16 +220,16 @@ const ProjectComponent = (props) => {
 
         <Buttons>
           <Button
-            target="_blank" to={{ pathname: `${link}` }}
+            target="_blank" to={link}
           >Live Link</Button>
 
           <Button
-            target="_blank" to={{ pathname: `${gitLink}` }}
+            target="_blank" to={gitLink}
           >Git Link</Button>
         </Buttons>
 
       </Box>
-    </Container>
+    </Container >
   )
 }
 
