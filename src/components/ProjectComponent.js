@@ -42,7 +42,7 @@ backdrop-filter: blur(2px);
   `};
 `;
 
-const Image = styled(NavLink)`
+const Image = styled.a`
   background-image: ${(props) => `url(${props.img})`};
   width: 100%;
   height: 15vw;
@@ -166,7 +166,7 @@ justify-content: center;
 // margin: 10px 0;
 `
 
-const Button = styled(Link)`
+const Button = styled.a`
 color: ${props => props.theme.text};
 text-align: center;
 font-size: calc(1em + 1.5vw)
@@ -198,7 +198,7 @@ const ProjectComponent = (props) => {
       <Box>
         <Title>{name}</Title>
         <Image
-          target="_blank" to={link}
+          target="_blank" href={link}
           img={imgSrc} />
 
         <Technology>Technology Used</Technology>
@@ -220,11 +220,11 @@ const ProjectComponent = (props) => {
 
         <Buttons>
           <Button
-            target="_blank" to={link}
+            target="_blank" href={link}
           >Live Link</Button>
 
           <Button
-            target="_blank" to={gitLink}
+            target="_blank" href={gitLink}
           >Git Link</Button>
         </Buttons>
 

@@ -179,7 +179,7 @@ const Text = styled(motion.div)`
   `};
 `;
 
-const Resume = styled(NavLink)`
+const Resume = styled.a`
 color: ${props => props.theme.text};
 text-align: center;
 font-size: calc(1em + 1.5vw)
@@ -216,7 +216,7 @@ const Intro = () => {
           <h3>I am Syed</h3>
           <h6>I am a Junior Full Stack Web Developer and I like to code simple beautiful websites</h6>
           <Resume
-            target="_blank" to={{ pathname: 'https://drive.google.com/file/d/1lt67Sz9tPIPl6cw1xQb8Aqn-OCmLxi4_/view?usp=sharing' }}
+            target="_blank" href='https://drive.google.com/file/d/1lt67Sz9tPIPl6cw1xQb8Aqn-OCmLxi4_/view?usp=sharing'
           >Download Resume</Resume>
         </Text>
       </SubBox>
