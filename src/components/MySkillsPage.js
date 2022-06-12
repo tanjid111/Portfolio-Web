@@ -187,7 +187,7 @@ const MySkillsPage = () => {
                     <Description>
                         <strong>Skills</strong>
                         <p>
-                            Html, Css, Js, React, TypeScript, ReactNative, Bootstrap, Tailwind, Firebase, Stripe, Node, Express, MongoDB etc.
+                            Html, Css, Js, React, TypeScript, ReactNative, Bootstrap, Tailwind, styled-components, framer-motion Firebase, Stripe, Node, Express, MongoDB etc.
                         </p>
                     </Description>
                     <Description>
